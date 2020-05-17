@@ -14,31 +14,38 @@ export const kControllerUserAction = 'controller:user_action';
 const kUserActionsChannel = "channel:user-actions";
 const kUserActionSubmit = "user-action:submit";
 const kUserActionDone = "user-action:done";
-export default class UserActionController extends Controller {
+
+/**
+ * @type UserActionController
+ */
+export class UserActionController extends Controller {
     constructor() {
         super(kControllerUserAction);
     }
 
-    config(){
+    config() {
         this.listen((action, event) => {
             UserActionService.create(action, this.app.context, this.app.middleware.bus).execute();
-        },kUserActionSubmit,kUserActionsChannel);
+        }, kUserActionSubmit, kUserActionsChannel);
     }
 
     /**
-     * @event y
+     * @event UserActionControllerEvent
      * @type {Event} channel:kControllerUserAction topic:action
      * @property {typeof UserAction} data
+     * @memberof events
      */
+
     /**
-     * @event x
+     * @event TangoEvent
      * @type {Event} channel:kChannelTango topic:action
      * @property {typeof UserAction} data
+     * @memberof events
      */
     /**
      *
-     * @fires x
-     * @fires y
+     * @fires UserActionControllerEvent
+     * @fires TangoEvent
      * @param {typeof UserAction} action
      * @return {Promise<*>}
      */

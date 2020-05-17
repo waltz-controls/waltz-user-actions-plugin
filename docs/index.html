@@ -29,9 +29,36 @@
               
                 
                 <li><a
-                  href='#submit'
-                  class="">
-                  submit
+                        class=" toggle-sibling"
+                        href='#useractioncontroller'>
+                    UserActionController
+                    <span class='icon'>▸</span>
+                </a>
+
+                    <div class='toggle-target display-none'>
+
+
+                        <ul class='list-reset py1-ul pl1'>
+                            <li class='h5'><span>Instance members</span></li>
+
+                            <li><a
+                                    class='regular pre-open'
+                                    href='#useractioncontrollersubmit'>
+                                #submit
+                            </a></li>
+
+                        </ul>
+
+
+                    </div>
+
+                </li>
+              
+                
+                <li><a
+                        href='#eventtangoevent'
+                        class="">
+                    TangoEvent
                   
                 </a>
                 
@@ -39,19 +66,9 @@
               
                 
                 <li><a
-                  href='#eventx'
-                  class="">
-                  x
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#eventy'
-                  class="">
-                  y
+                        href='#eventuseractioncontrollerevent'
+                        class="">
+                    UserActionControllerEvent
                   
                 </a>
                 
@@ -159,89 +176,92 @@
           
           <section class='p2 mb2 clearfix bg-white minishadow'>
 
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='submit'>
-      submit
-    </h3>
-    
-    
-  </div>
-  
 
-  
-    <div class='pre p1 fill-light mt0'>submit(action: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;any></div>
-  
-  
+              <div class='clearfix'>
 
-  
-  
-  
-  
-  
-  
+                  <h3 class='fl m0' id='useractioncontroller'>
+                      UserActionController
+                  </h3>
 
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>action</span> <code class='quiet'>(any)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
 
-  
+              </div>
 
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;any></code>:
-        
 
-      
-    
-  
+              <div class='pre p1 fill-light mt0'>new UserActionController()</div>
 
-  
 
-  
+              <p>
+                  Extends
 
-  
+                  Controller
 
-  
+              </p>
 
-  
 
-  
+              <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+              <div class="clearfix">
 
-  
-</section>
+                  <div class='border-bottom' id='useractioncontrollersubmit'>
+                      <div class="clearfix small pointer toggle-sibling">
+                          <div class="py1 contain">
+                              <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                              <span class='code strong strong truncate'>submit(action)</span>
+                          </div>
+                      </div>
+                      <div class="clearfix display-none toggle-target">
+                          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+
+                              <div class='pre p1 fill-light mt0'>submit(action: any): <a
+                                      href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;any>
+                              </div>
+
+
+                              <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                              <div class='prose'>
+
+                                  <div class='space-bottom0'>
+                                      <div>
+                                          <span class='code bold'>action</span> <code class='quiet'>(any)</code>
+
+                                      </div>
+
+                                  </div>
+
+                              </div>
+
+
+                              <div class='py1 quiet mt1 prose-big'>Returns</div>
+                              <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;any></code>:
+
+
+                          </section>
+
+                      </div>
+                  </div>
+
+              </div>
+
+
+          </section>
 
           
         
           
           <section class='p2 mb2 clearfix bg-white minishadow'>
 
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='eventx'>
-      x
-    </h3>
-    
-    
-  </div>
-  
 
-  
-    <div class='pre p1 fill-light mt0'>x</div>
+              <div class='clearfix'>
+
+                  <h3 class='fl m0' id='eventtangoevent'>
+                      TangoEvent
+                  </h3>
+
+
+              </div>
+
+
+              <div class='pre p1 fill-light mt0'>TangoEvent</div>
   
     <p>
       Type:
@@ -283,19 +303,18 @@
           
           <section class='p2 mb2 clearfix bg-white minishadow'>
 
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='eventy'>
-      y
-    </h3>
-    
-    
-  </div>
-  
 
-  
-    <div class='pre p1 fill-light mt0'>y</div>
+              <div class='clearfix'>
+
+                  <h3 class='fl m0' id='eventuseractioncontrollerevent'>
+                      UserActionControllerEvent
+                  </h3>
+
+
+              </div>
+
+
+              <div class='pre p1 fill-light mt0'>UserActionControllerEvent</div>
   
     <p>
       Type:
