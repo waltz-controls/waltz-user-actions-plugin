@@ -30,22 +30,27 @@ export class UserActionController extends Controller {
     }
 
     /**
+     * channel:kControllerUserAction topic:action
+     *
      * @event UserActionControllerEvent
-     * @type {Event} channel:kControllerUserAction topic:action
+     * @type {Event}
      * @property {typeof UserAction} data
-     * @memberof events
      */
 
     /**
+     * channel:kChannelTango topic:action
+     *
      * @event TangoEvent
-     * @type {Event} channel:kChannelTango topic:action
+     * @type {Event}
      * @property {typeof UserAction} data
-     * @memberof events
      */
     /**
+     * Fires {@link #eventtangoevent}
      *
-     * @fires UserActionControllerEvent
-     * @fires TangoEvent
+     * Fires {@link #eventuseractioncontrollerevent}
+     *
+     * @emits UserActionControllerEvent
+     * @emits TangoEvent
      * @param {typeof UserAction} action
      * @return {Promise<*>}
      */
