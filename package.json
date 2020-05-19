@@ -1,7 +1,7 @@
 {
   "name": "@waltz-controls/waltz-user-actions-plugin",
-  "version": "1.0.0",
-  "description": "XXX",
+  "version": "2.0.0",
+  "description": "UserActions plugin for Waltz",
   "main": "dist/_virtual/index.esm.js",
   "module": "dist/_virtual/index.esm.js",
   "watch": {
@@ -35,6 +35,15 @@
     "rollup": "^2.3.4"
   },
   "dependencies": {
+    "@waltz-controls/middleware": "^2.0.0",
+    "@waltz-controls/waltz-tango-rest-plugin": "^2.0.0",
     "rxjs": "^6.5.5"
-  }
+  },
+  "runtimeDependencies": [
+    "@waltz-controls/middleware",
+    "@waltz-controls/waltz-tango-rest-plugin",
+    "rxjs",
+    "rxjs/operators",
+    "rxjs/fetch"
+  ]
 }

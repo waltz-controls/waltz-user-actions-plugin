@@ -7,7 +7,7 @@ export default [
     // browser-friendly UMD build
     {
         input: 'src/**/*.js',
-        external: ['@waltz-controls/middleware', '@waltz-controls/waltz-tango-rest-plugin', 'rxjs', 'rxjs/operators', 'rxjs/fetch'],
+        external: pkg.runtimeDependencies,
         output: {
             dir: 'dist',
             format: 'es',

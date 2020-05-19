@@ -17,13 +17,16 @@ const kUserActionDone = "user-action:done";
 
 /**
  * @type UserActionController
+ * @extends Controller
  */
 export class UserActionController extends Controller {
-    constructor() {
-        super(kControllerUserAction);
-    }
-
-    config() {
+    /**
+     *
+     * @param {Application} app
+     * @constructor
+     */
+    constructor(app) {
+        super(kControllerUserAction, app);
         this.listen((action, event) => {
             UserActionService.create(action, this.app.context, this.app.middleware.bus).execute();
         }, kUserActionSubmit, kUserActionsChannel);
