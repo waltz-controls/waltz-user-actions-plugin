@@ -1,5 +1,5 @@
 import '../view/user_log'
-import {kInprocChannel, WaltzWidget} from "@waltz-controls/middleware";
+import {WaltzWidget} from "@waltz-controls/middleware";
 import {kControllerUserAction} from "../controller/user_action_controller";
 import {kChannelTango} from "@waltz-controls/waltz-tango-rest-plugin";
 import {
@@ -92,7 +92,7 @@ export class UserLogWidget extends WaltzWidget {
         this.actions = webix.extend(new webix.DataCollection(), BoundedReverseList);
 
         //TODO pending action
-        this.middleware.subscribe(kControllerUserAction, kInprocChannel, action => this.log(action));
+        this.middleware.subscribe(kAnyTopic, kControllerUserAction, action => this.log(action));
         this.middleware.subscribe(kAnyTopic, kChannelTango, action => this.log(action));
     }
 
@@ -110,7 +110,7 @@ export class UserLogWidget extends WaltzWidget {
                 onClick:
                     {
                         "redo": (ev, id) => {
-                            const action = this.getItem(id);
+                            const action = $$(this.name).getItem(id);
                             if (action.redoable)
                                 webix.confirm(`<div>Confirm redo action <strong>${action.action}</strong> on <strong>${action.target}</strong>?</div>`, "confirm-warning")
                                     .then(() => {
