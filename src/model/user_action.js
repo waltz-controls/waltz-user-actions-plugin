@@ -133,7 +133,7 @@ export class UpdateTangoAttributeInfo extends TangoUserAction {
  */
 export class ExecuteUserScript extends UserAction {
     constructor({user, script}) {
-        super(user, 'run','script');
+        super(user, 'run', 'script', true);
         this.data = script;
     }
 }
