@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset='utf-8'>
-    <title>@waltz-controls/waltz-user-actions-plugin 2.0.1 | Documentation</title>
+    <title>@waltz-controls/waltz-user-actions-plugin 2.0.2 | Documentation</title>
     <meta content='UserActions plugin for Waltz' name='description'>
     <meta content='width=device-width,initial-scale=1' name='viewport'>
     <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>@waltz-controls/waltz-user-actions-plugin</h3>
-            <div class='mb1'><code>2.0.1</code></div>
+            <div class='mb1'><code>2.0.2</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -57,8 +57,8 @@
                 
                 <li><a
                         class=""
-                        href='#eventuseractioncontrollerevent'>
-                    UserActionControllerEvent
+                        href='#eventtangoevent'>
+                    TangoEvent
 
                 </a>
                 
@@ -67,8 +67,8 @@
                 
                 <li><a
                         class=""
-                        href='#eventtangoevent'>
-                    TangoEvent
+                        href='#eventuseractioncontrollerevent'>
+                    UserActionControllerEvent
 
                 </a>
                 
@@ -156,8 +156,8 @@
 
 
                 <li><a
-                        href='#executeuserscript'
-                        class="">
+                        class=""
+                        href='#executeuserscript'>
                     ExecuteUserScript
 
                 </a>
@@ -316,17 +316,17 @@
 
               <div class='clearfix'>
 
-                  <h3 class='fl m0' id='eventuseractioncontrollerevent'>
-                      UserActionControllerEvent
+                  <h3 class='fl m0' id='eventtangoevent'>
+                      TangoEvent
                   </h3>
 
 
               </div>
 
 
-              <p>channel:kControllerUserAction topic:action</p>
+              <p>channel:kChannelTango topic:action</p>
 
-              <div class='pre p1 fill-light mt0'>UserActionControllerEvent</div>
+              <div class='pre p1 fill-light mt0'>TangoEvent</div>
 
               <p>
                   Type:
@@ -342,17 +342,17 @@
 
               <div class='clearfix'>
 
-                  <h3 class='fl m0' id='eventtangoevent'>
-                      TangoEvent
+                  <h3 class='fl m0' id='eventuseractioncontrollerevent'>
+                      UserActionControllerEvent
                   </h3>
 
 
               </div>
 
 
-              <p>channel:kChannelTango topic:action</p>
+              <p>channel:kControllerUserAction topic:action</p>
 
-              <div class='pre p1 fill-light mt0'>TangoEvent</div>
+              <div class='pre p1 fill-light mt0'>UserActionControllerEvent</div>
 
               <p>
                   Type:
