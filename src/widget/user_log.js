@@ -57,9 +57,9 @@ class TangoUserActionFormatter extends UserActionFormatter {
             case ReadTangoAttribute.action:
                 return `<div style="background-color: #D5E7B3"><strong>.read() => ${this.action.data.value}</strong></div>`;
             case WriteTangoAttribute.action:
-                return `<div style="background-color: aliceblue"><strong>.write(${this.action.value}) => ${this.action.data.value}</strong></div>`;
+                return `<div style="background-color: #D5E7B3"><strong>.write(${this.action.value}) => ${this.action.data.value}</strong></div>`;
             case ExecuteTangoCommand.action:
-                return `<div style="background-color: #e7b3b3"><strong>.execute(${this.action.value}) => ${this.action.data.output}</strong></div>`;
+                return `<div style="background-color: #D5E7B3"><strong>.execute(${this.action.value}) => ${this.action.data.output}</strong></div>`;
             case UpdateDeviceAlias.action:
                 return `<div><strong>${this.action.remove ? 'removes' : ''} ${this.action.device.id}.alias(${this.action.alias})</strong></div>`;
             case UpdateTangoAttributeInfo.action:
